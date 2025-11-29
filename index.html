@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday Bestie 🎂❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --bg-dark: #15010b;
+      --pink: #ff8fb7;
+      --pink-soft: #ffd6e8;
+      --red: #ff4b6e;
+      --accent: #ffe7f2;
+      --text-main: #2b0014;
+      --glass: rgba(255, 255, 255, 0.12);
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      min-height: 100vh;
+      background: radial-gradient(circle at top left, #c08091 0, #ff6890 30%, #2b0014 80%);
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+      cursor: none;
+    }
+
+    /* Floating hearts in background */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,0.18) 0, transparent 50%),
+        radial-gradient(circle at 80% 10%, rgba(255,255,255,0.18) 0, transparent 45%),
+        radial-gradient(circle at 20% 90%, rgba(255,255,255,0.15) 0, transparent 45%);
+      opacity: 0.6;
+      z-index: -2;
+    }
+
+    body::after {
+      content: "❤️ 💌 🎀 ✨ 💖";
+      position: fixed;
+      font-size: 3.5rem;
+      opacity: 0.12;
+      inset: 10% 5%;
+      z-index: -1;
+      letter-spacing: 1rem;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    /* Scroll progress bar */
+    #scrollProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 60;
+    }
+
+    #scrollBar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #ff8fb7, #ff4b6e);
+      box-shadow: 0 0 10px rgba(255, 143, 183, 0.9);
+      transition: width 0.08s linear;
+    }
+
+    /* Custom cursor glow */
+    .cursor-dot {
+      position: fixed;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: rgba(255, 214, 232, 0.8);
+      box-shadow: 0 0 18px rgba(255, 214, 232, 0.9);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 10000;
+      mix-blend-mode: screen;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0.6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1000px, 94%);
+      background: rgba(21, 1, 11, 0.6);
+      border-radius: 999px;
+      padding: 0.5rem 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      z-index: 50;
+    }
+
+    .logo-text {
+      font-family: "Dancing Script", cursive;
+      font-size: 1.3rem;
+      color: #ffe7f2;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+    }
+
+    .logo-text span {
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      font-size: 0.75rem;
+      text-decoration: none;
+      color: #ffe7f2;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: transparent;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 215, 232, 0.2);
+      border-color: rgba(255, 215, 232, 0.5);
+    }
+
+    .nav-links a.active {
+      background: linear-gradient(135deg, #bd728c, #ff4b6e);
+      color: #2b0014;
+      font-weight: 600;
+      box-shadow: 0 0 14px rgba(148, 72, 100, 0.8);
+    }
+
+    /* PAGES / SECTIONS */
+    .page {
+      min-height: 100vh;
+      padding: 6rem 1.2rem 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page-inner {
+      width: min(1000px, 100%);
+      background: rgba(255, 255, 255, 0.09);
+      border-radius: 1.7rem;
+      padding: 2.2rem 1.6rem;
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 18px 60px rgba(10, 0, 6, 0.85);
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 1.8rem;
+
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .page-inner.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .page-alt .page-inner {
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    }
+
+    @media (max-width: 820px) {
+      .page-inner,
+      .page-alt .page-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .page-heading {
+      font-family: "Dancing Script", cursive;
+      font-size: clamp(2rem, 3vw + 1.4rem, 3rem);
+      margin-bottom: 0.6rem;
+      color: #ffe7f2;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .page-subtitle {
+      font-size: 0.88rem;
+      color: #ffe7f2;
+      opacity: 0.9;
+      margin-bottom: 1.2rem;
+    }
+
+    .tagline-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.7rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px dashed rgba(255, 215, 232, 0.7);
+      background: rgba(255, 215, 232, 0.16);
+      margin-bottom: 1rem;
+    }
+
+    .tagline-pill span {
+      font-size: 0.9rem;
+    }
+
+    .message {
+      font-size: 0.9rem;
+      color: #ffe7f2;
+      line-height: 1.7;
+      margin-bottom: 0.8rem;
+    }
+
+    .message b {
+      color: #ffd6e8;
+    }
+
+    .emoji-row {
+      margin-top: 0.7rem;
+      font-size: 1.4rem;
+      animation: float-soft 3s ease-in-out infinite alternate;
+    }
+
+    .countdown {
+      font-size: 0.8rem;
+      color: #ffd6e8;
+      margin-bottom: 0.8rem;
+      opacity: 0.95;
+    }
+
+    .sticker-row {
+      margin-top: 1.1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .sticker {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(255, 215, 232, 0.18);
+      border: 1px solid rgba(255, 215, 232, 0.7);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    /* IMAGE AREA */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.5rem;
+      position: relative;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      border-radius: 1rem;
+      object-fit: cover;
+      height: 120px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .photo-grid img:nth-child(1) {
+      transform: rotate(-3deg);
+    }
+
+    .photo-grid img:nth-child(2) {
+      transform: rotate(2deg);
+    }
+
+    .photo-grid img:nth-child(3) {
+      transform: rotate(2deg);
+    }
+
+    .photo-grid img:nth-child(4) {
+      transform: rotate(-2deg);
+    }
+
+    .photo-grid img:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.6);
+    }
+
+    .photo-sticker {
+      position: absolute;
+      right: -0.2rem;
+      top: -0.8rem;
+      font-size: 1.6rem;
+      text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+      animation: float-heart 2.5s ease-in-out infinite alternate;
+    }
+
+    .photo-caption {
+      margin-top: 0.7rem;
+      font-size: 0.78rem;
+      color: #ffe7f2;
+      opacity: 0.9;
+    }
+
+    /* LIST STYLES */
+    .love-list {
+      list-style: none;
+      margin-top: 0.6rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.4rem 0.9rem;
+      font-size: 0.86rem;
+    }
+
+    .love-list li::before {
+      content: "♡";
+      margin-right: 0.3rem;
+      color: #ffd6e8;
+    }
+
+    /* Memory tabs on Memories page */
+    .memory-tabs {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .memory-tabs button {
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 215, 232, 0.7);
+      background: rgba(21, 1, 11, 0.6);
+      color: #ffe7f2;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .memory-tabs button.active {
+      background: linear-gradient(135deg, #ff8fb7, #ff4b6e);
+      color: #2b0014;
+      box-shadow: 0 0 12px rgba(255, 143, 183, 0.9);
+    }
+
+    .memory-panel {
+      margin-top: 0.8rem;
+      font-size: 0.86rem;
+      color: #ffe7f2;
+      line-height: 1.6;
+      display: none;
+    }
+
+    .memory-panel.active {
+      display: block;
+    }
+
+    /* Wish wall on future page */
+    .wish-wall {
+      margin-top: 1.1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.6rem;
+    }
+
+    .wish-card {
+      padding: 0.6rem 0.7rem;
+      border-radius: 1rem;
+      background: rgba(255, 215, 232, 0.12);
+      border: 1px solid rgba(255, 215, 232, 0.6);
+      font-size: 0.8rem;
+      color: #ffe7f2;
+      backdrop-filter: blur(10px);
+      animation: slideInCard 0.7s ease forwards;
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    @keyframes slideInCard {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Secret nickname area */
+    .secret-container {
+      margin-top: 1rem;
+      padding: 0.8rem 0.9rem;
+      border-radius: 1.2rem;
+      border: 1px dashed rgba(255, 215, 232, 0.7);
+      background: rgba(21, 1, 11, 0.6);
+      font-size: 0.8rem;
+    }
+
+    .secret-row {
+      margin-top: 0.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .secret-row input {
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 215, 232, 0.7);
+      background: rgba(0, 0, 0, 0.4);
+      color: #ffe7f2;
+      font-size: 0.8rem;
+      outline: none;
+    }
+
+    .secret-row button {
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 215, 232, 0.9);
+      background: rgba(255, 143, 183, 0.9);
+      color: #2b0014;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .secret-row button:hover {
+      background: #ffd6e8;
+    }
+
+    .secret-error {
+      margin-top: 0.4rem;
+      font-size: 0.75rem;
+      color: #ffbac5;
+      min-height: 1em;
+    }
+
+    .secret-message {
+      margin-top: 0.7rem;
+      font-size: 0.86rem;
+      color: #ffe7f2;
+      line-height: 1.6;
+      display: none;
+    }
+
+    .secret-message.visible {
+      display: block;
+    }
+
+    /* Music player (YouTube embedded) */
+    .music-player {
+      margin-top: 1.3rem;
+      background: rgba(255, 215, 232, 0.16);
+      border-radius: 1.2rem;
+      padding: 1rem;
+      border: 1px solid rgba(255, 215, 232, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    .music-title {
+      font-family: "Dancing Script", cursive;
+      font-size: 1.4rem;
+      color: #ffe7f2;
+      margin-bottom: 0.6rem;
+    }
+
+    .music-player-frame {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      border-radius: 1rem;
+      overflow: hidden;
+      margin-bottom: 0.7rem;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .music-player-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .music-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .song-btn {
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.8rem;
+      cursor: pointer;
+      background: rgba(255, 143, 183, 0.25);
+      color: #ffe7f2;
+      backdrop-filter: blur(6px);
+      transition: 0.2s ease;
+    }
+
+    .song-btn:hover {
+      background: rgba(255, 143, 183, 0.6);
+      transform: translateY(-2px);
+    }
+
+    .song-btn.active-song {
+      background: linear-gradient(135deg, #ff8fb7, #ff4b6e);
+      color: #2b0014;
+      box-shadow: 0 0 12px rgba(255, 143, 183, 0.9);
+    }
+
+    /* BOTTOM NAV ARROW */
+    .next-link {
+      margin-top: 1.3rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 215, 232, 0.8);
+      text-decoration: none;
+      color: #ffe7f2;
+      background: rgba(21, 1, 11, 0.6);
+      transition: all 0.2s ease;
+    }
+
+    .next-link span {
+      font-size: 1.1rem;
+    }
+
+    .next-link:hover {
+      background: linear-gradient(135deg, #ff8fb7, #ff4b6e);
+      color: #2b0014;
+      box-shadow: 0 0 16px rgba(255, 143, 183, 0.9);
+      transform: translateY(-1px);
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #ffd6e8;
+      padding: 0.8rem 1rem 1.4rem;
+      opacity: 0.85;
+    }
+
+    .footer span {
+      font-family: "Dancing Script", cursive;
+      font-size: 1.2rem;
+    }
+
+    /* IMAGE POPUP (Lightbox Style) */
+    #imgPopup {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    #imgPopup img {
+      max-width: 92%;
+      max-height: 92%;
+      border-radius: 1rem;
+      box-shadow: 0 0 40px rgba(255, 153, 191, 0.7);
+      animation: popZoom 0.35s ease;
+    }
+
+    #closePopup {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2.4rem;
+      color: #ffffff;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    @keyframes popZoom {
+      from {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Heart confetti */
+    .heart-confetti {
+      position: fixed;
+      font-size: 1.2rem;
+      pointer-events: none;
+      animation: heartFall 2.2s ease-out forwards;
+      z-index: 90;
+    }
+
+    @keyframes heartFall {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-180px) scale(0.6);
+        opacity: 0;
+      }
+    }
+
+    /* Cute animations */
+    @keyframes float-soft {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-4px);
+      }
+    }
+
+    @keyframes float-heart {
+      from {
+        transform: translateY(0) scale(1);
+      }
+      to {
+        transform: translateY(-6px) scale(1.05);
+      }
+    }
+
+    /* Small screens nav */
+    @media (max-width: 640px) {
+      body {
+        cursor: auto;
+      }
+      .cursor-dot {
+        display: none;
+      }
+      .navbar {
+        flex-direction: column;
+        gap: 0.3rem;
+        padding: 0.4rem 0.75rem;
+      }
+      .logo-text {
+        font-size: 1.05rem;
+      }
+      .nav-links {
+        justify-content: center;
+      }
+      .nav-links a {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.55rem;
+      }
+      .page-inner {
+        padding: 1.4rem 1.1rem;
+      }
+      .photo-grid img {
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- cursor glow -->
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- scroll progress -->
+  <div id="scrollProgress">
+    <div id="scrollBar"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo-text">
+      <span>🎂</span> Happy Birthday, Bestie!
+    </div>
+    <nav class="nav-links">
+      <a href="#page1" class="active">Home</a>
+      <a href="#page2">Wishes</a>
+      <a href="#page3">Memories</a>
+      <a href="#page4">10 Things</a>
+      <a href="#page5">Our Chaos</a>
+      <a href="#page6">Photo Wall</a>
+      <a href="#page7">Letters</a>
+      <a href="#page8">Future Us</a>
+      <a href="#page9">Mini Scrapbook</a>
+      <a href="#page10">For You 💌</a>
+    </nav>
+  </header>
+
+  <!-- PAGE 1 -->
+  <section id="page1" class="page">
+    <div class="page-inner">
+      <div>
+        <div class="tagline-pill">
+          <span>🎀</span> Special edition: Your birthday
+        </div>
+        <h1 class="page-heading" id="mainHeading">
+          Happy Birthday, My Favourite Human 🥺❤️
+        </h1>
+        <p class="countdown" id="countdown"></p>
+        <p class="page-subtitle">
+          This little website is my handmade digital gift just for you. Every page is a tiny piece of my heart.
+        </p>
+        <p class="message">
+          Dear <b>Bestie</b>, from the first time we vibed over the smallest things to all the deep talks at
+          2 AM, you’ve been my safe place. Thank you for existing exactly the way you are — loud, soft, dramatic,
+          caring, all at once. Today is about <b>you</b>, your smile, your happiness and your dreams. 🎉
+        </p>
+        <p class="message">
+          I’m using this website to say what I probably don’t say enough: <b>you matter to me more than you know</b>.  
+          Swipe through the pages slowly, okay? This is our tiny love-filled corner of the internet. 💌
+        </p>
+        <div class="emoji-row">
+          ✨ 🎂 🎀 💖 🍰 🌸
+        </div>
+
+        <!-- Embedded YouTube music playlist -->
+       <div class="music-player" id="musicSection">
+  <h3 class="music-title">🎵 Our Birthday Song</h3>
+
+  <audio id="bgMusic" src="birthday-song.mp3" loop></audio>
+
+  <div class="music-buttons">
+    <button class="song-btn" id="musicToggle">▶ Play our song 🎵</button>
+  </div>
+</div>
+
+
+
+        <a href="#page2" class="next-link" id="firstWishLink">
+          Go to the first wish <span>➜</span>
+        </a>
+      </div>
+      <div>
+        <div class="photo-grid">
+          <img src="https://images.pexels.com/photos/3419694/pexels-photo-3419694.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Best friends laughing" />
+          <img src="https://images.pexels.com/photos/2078266/pexels-photo-2078266.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Birthday cake" />
+          <img src="https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cute confetti" />
+          <img src="https://images.pexels.com/photos/3320903/pexels-photo-3320903.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Friends with balloons" />
+          <div class="photo-sticker">💖</div>
+        </div>
+        <p class="photo-caption">
+          Just imagine these photos are all our chaotic, pretty, unfiltered memories together. One day,
+          we’ll recreate them for real. 📸
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section id="page2" class="page page-alt">
+    <div class="page-inner">
+      <div>
+        <div class="tagline-pill">
+          <span>💌</span> Birthday wish, straight from my heart
+        </div>
+        <h2 class="page-heading">
+          A Soft Birthday Wish For You 🌷
+        </h2>
+        <p class="page-subtitle">
+          I wish you peace, loud laughter, quiet comfort and everything you secretly pray about.
+        </p>
+        <p class="message">
+          On your birthday, I pray that every worry in your heart gets replaced with something gentle.
+          I hope the right people stay, the wrong ones fade, and you always have the strength to choose
+          <b>yourself</b>. I want you to wake up every day and feel loved — not just by the world, but by
+          your own reflection too. 💫
+        </p>
+        <p class="message">
+          I wish you friendships that feel like home, opportunities that make you proud, and little surprises
+          that make you randomly smile in public like an idiot. And in all of that, I wish you never forget:
+          <b>you’re never alone, because I’m always one text away.</b> 📱❤️
+        </p>
+        <div class="sticker-row">
+          <div class="sticker">🎂 main character energy</div>
+          <div class="sticker">💖 emotionally precious</div>
+          <div class="sticker">🌙 soft girl vibes</div>
+        </div>
+        <a href="#page3" class="next-link">
+          Dive into our memories <span>➜</span>
+        </a>
+      </div>
+      <div>
+        <div class="photo-grid">
+          <img src="https://images.pexels.com/photos/10401591/pexels-photo-10401591.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Holding hands" />
+          <img src="Pic1.webp.webp" alt="Gift box" />
+          <img src="Pic1.webp.webp" alt="Gift box" />
+          <img src="https://images.pexels.com/photos/5220070/pexels-photo-5220070.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cute celebration" />
+          <div class="photo-sticker">🎀</div>
+        </div>
+        <p class="photo-caption">
+          These are not our real photos, but the feeling? 100% ours: soft, safe, and a little dramatic. 😌
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 3 -->
+  <section id="page3" class="page">
+    <div class="page-inner">
+      <div>
+        <div class="tagline-pill">
+          <span>📸</span> Tiny memories, huge impact
+        </div>
+        <h2 class="page-heading">
+          Our Little Moments That Live Rent-Free In My Head 🧠💘
+        </h2>
+        <p class="page-subtitle">
+          Not grand gestures, just the small moments where I realised — “yup, this one is my person”.
+        </p>
+        <p class="message">
+          I still remember <b>that one random day</b> when we laughed so much that our stomachs actually hurt.
+          Or the time when I was totally broken inside and you quietly stayed with me, no big lecture, just
+          presence — and that meant everything.
+        </p>
+        <p class="message">
+          We’ve shared silly selfies, ugly crying, random reels, panicky calls before exams, and long voice notes
+          when text wasn’t enough. If someone asked me to define comfort, I’d send them a screenshot of our chats. 📂
+        </p>
+
+        <div class="memory-tabs">
+          <button class="active" data-target="mem-funny">Funny moments 😂</button>
+          <button data-target="mem-soft">Soft moments 🥺</button>
+          <button data-target="mem-chaos">Our chaos 🤪</button>
+        </div>
+
+        <div class="memory-panel active" id="mem-funny">
+          • That one time we laughed at something so stupid and couldn’t stop for 10 minutes straight.  
+          • All our “we’ll start studying at 5” plans that turned into reel marathons.  
+          • The random filters we try just to send each other ugly selfies.
+        </div>
+        <div class="memory-panel" id="mem-soft">
+          • You checking on me with “reached?” even when you’re tired.  
+          • The quiet calls where we don’t talk much but still feel better.  
+          • The way you somehow know when I’m not okay, even when I say “I’m fine”.
+        </div>
+        <div class="memory-panel" id="mem-chaos">
+          • Our last-minute exam panic + motivational speeches.  
+          • Sharing life updates like a daily news bulletin.  
+          • Surviving drama, overthinking, and still somehow laughing at the end.  
+        </div>
+
+        <a href="#page4" class="next-link">
+          10 things I adore about you <span>➜</span>
+        </a>
+      </div>
+      <div>
+        <div class="photo-grid">
+          <img src="https://images.pexels.com/photos/7084400/pexels-photo-7084400.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Friends taking selfie" />
+          <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Laughing together" />
+          <img src="https://images.pexels.com/photos/3844782/pexels-photo-3844782.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Coffee and talk" />
+          <img src="https://images.pexels.com/photos/3320902/pexels-photo-3320902.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Candid moment" />
+          <div class="photo-sticker">✨</div>
+        </div>
+        <p class="photo-caption">
+          One day we’ll replace these stock images with our real chaos photos and this page will become legendary.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 4 -->
+  <section id="page4" class="page page-alt">
+    <div class="page-inner">
+      <div>
+        <div class="tagline-pill">
+          <span>🌹</span> 10 little love notes
+        </div>
+        <h2 class="page-heading">
+          10 Things I Absolutely Love About You 💘
+        </h2>
+        <p class="page-subtitle">
+          I could write a whole book, but here’s a tiny list I’ll start with.
+        </p>
+
+        <ul class="love-list">
+          <li>Your laugh, especially when you try to hide it.</li>
+          <li>The way you care about people more than you admit.</li>
+          <li>Your random “did you eat?” messages. 🥺</li>
+          <li>Your strength, even when you don’t feel strong.</li>
+          <li>The way you hype me up like I’m a celebrity.</li>
+          <li>Your mood swings. Yes, even those. They’re very you. 😌</li>
+          <li>How you remember tiny details about me.</li>
+          <li>Your ability to survive drama and still smile.</li>
+          <li>The way you love deeply, silently, genuinely.</li>
+          <li>Simply: that you are <b>you</b>, and not trying to be anyone else.</li>
+        </ul>
+
+        <div class="emoji-row">
+          💗 😭 🌸 🎀 🎧 ✨
+        </div>
+
+        <a href="#page5" class="next-link">
+          Our chaotic side <span>➜</span>
+        </a>
+      </div>
+      <div>
+        <div class="photo-grid">
+          <img src="https://images.pexels.com/photos/853406/pexels-photo-853406.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Heart hands" />
+          <img src="https://images.pexels.com/photos/5735486/pexels-photo-5735486.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cute notes" />
+          <img src="https://images.pexels.com/photos/1028725/pexels-photo-1028725.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Flowers" />
+          <img src="https://images.pexels.com/photos/2072175/pexels-photo-2072175.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pink vibe" />
+          <div class="photo-sticker">🌸</div>
+        </div>
+        <p class="photo-caption">
+          These are the “soft aesthetic” stickers of this page. In real life, it’s you who makes everything aesthetic.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 5 -->
+  <section id="page5" class="page">
+    <div class="page-inner">
+      <div>
+        <div class="tagline-pill">
+          <span>🤪</span> The chaos we call friendship
+        </div>
+        <h2 class="page-heading">
+          Our Drama, Our Cringe, Our Inside Jokes 😂
+        </h2>
+        <p class="page-subtitle">
+          If someone saw our chat screenshots, they’d be concerned. And honestly… fair.
+        </p>
+        <p class="message">
+          Thank you for sending me weird reels at 2 AM, giving me “gyaan” and then doing the exact opposite yourself,
+          and for being my partner in “we’re tired but still laughing” kind of moments. Our friendship is 50% deep talk,
+          50% nonsense, and 100% comfort.
+        </p>
+        <p class="message">
+          I love that we can go from “I hate everyone” to “look at this cute dog” in the same conversation. Life would
+          be so painfully boring without you. You are my favourite little problem. 🫶
+        </p>
+        <div class="sticker-row">
+          <div class="sticker">📲 148 missed voice notes</div>
+          <div class="sticker">🍟 emotional support snacks</div>
+          <div class="sticker">🤣 “we’ll study from tomorrow”</div>
+        </div>
+        <a href="#page6" class="next-link">
+          Scroll to the photo wall <span>➜</span>
+        </a>
+      </div>
+      <div>
+        <div class="photo-grid">
+          <img src="https://images.pexels.com/photos/5259825/pexels-photo-5259825.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Laughing" />
+          <img src="https://images.pexels.com/photos/5531541/pexels-photo-5531541.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hanging out" />
+          <img src="https://images.pexels.com/photos/8580800/pexels-photo-8580800.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Friends being silly" />
+          <img src="https://images.pexels.com/photos/5185133/pexels-photo-5185133.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fun moments" />
+          <div class="photo-sticker">😂</div>
+        </div>
+        <p class="photo-caption">
+          Imagine these are our funniest candids and unflattering angles that we still keep because they’re “iconic”.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 6 -->
+  <section id="page6" class="page page-alt">
+    <div class="page-inner">
+      <div>
+        <div class="tagline-pill">
+          <span>🖼️</span> Photo wall, but digital
+        </div>
+        <h2 class="page-heading">
+          Our Aesthetic Photo Scrapboard 📷✨
+        </h2>
+        <p class="page-subtitle">
+          One day this will be a collage of our real photos. For now, it’s a moodboard of us.
+        </p>
+        <p class="message">
+          Each picture here is just a placeholder, but the feeling behind it is so real. I see us in every
+          vibe — walking, laughing, looking at the sky, surviving life together. I hope, years from now,
+          we look back at our pictures and think: <b>“we really grew up together.”</b>
+        </p>
+        <p class="message">
+          Keep all your selfies, even the ugly ones. Especially the ugly ones. They’re proof of how real we are. 🤭
+        </p>
+        <a href="#page7" class="next-link">
+          Open the letters page <span>➜</span>
+        </a>
+      </div>
+      <div>
+        <div class="photo-grid">
+          <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Best friends" />
+          <img src="https://images.pexels.com/photos/10401943/pexels-photo-10401943.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Polaroid memories" />
+          <img src="https://images.pexels.com/photos/1064000/pexels-photo-1064000.jpeg?auto=compress&cs=tinysrgb&w=600" alt="City lights" />
+          <img src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Holding balloons" />
+          <div class="photo-sticker">📷</div>
+        </div>
+        <p class="photo-caption">
+          Replace these image links with your own pictures to turn this into a real memory wall of your birthday.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 7 -->
+  <section id="page7" class="page">
+    <div class="page-inner">
+      <div>
+        <div class="tagline-pill">
+          <span>💌</span> letter, not just a message
+        </div>
+        <h2 class="page-heading">
+          A Tiny Birthday Letter For You ✍🏼
+        </h2>
+        <p class="page-subtitle">
+          If I had a pen and paper, it would still say the same things — straight from my heart to yours.
+        </p>
+        <p class="message">
+          Dear bestie, if you ever feel lost, read this again: <b>you are precious.</b> Your heart, your mind,
+          your existence — they add softness to this world. There are people who feel safe because you exist.
+          I am one of them.
+        </p>
+        <p class="message">
+          I know life is not always kind. Some days are heavier, some nights are a bit louder inside your head.
+          But please don’t forget that you have someone who will always choose you, stand by you, and annoy you
+          with random “I love you, idiot” texts. That someone is me. 🤍
+        </p>
+        <p class="message">
+          You deserve everything gentle in this world. Never settle for less than the kind of love you give.
+        </p>
+        <div class="emoji-row">
+          🤍 ✨ 🕊️ 🎂 🌙
+        </div>
+        <a href="#page8" class="next-link">
+          Turn the page to “Future Us” <span>➜</span>
+        </a>
+      </div>
+      <div>
+        <div class="photo-grid">
+          <img src="https://images.pexels.com/photos/883466/pexels-photo-883466.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Writing a letter" />
+          <img src="https://images.pexels.com/photos/4195342/pexels-photo-4195342.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cozy letter" />
+          <img src="https://images.pexels.com/photos/6322476/pexels-photo-6322476.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hands & paper" />
+          <img src="https://images.pexels.com/photos/6311651/pexels-photo-6311651.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Letter & flowers" />
+          <div class="photo-sticker">💌</div>
+        </div>
+        <p class="photo-caption">
+          This page is for all the words we don’t always say out loud, but always feel. Keep this close.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 8 -->
+  <section id="page8" class="page page-alt">
+    <div class="page-inner">
+      <div>
+        <div class="tagline-pill">
+          <span>🌙</span> manifesting soft futures
+        </div>
+        <h2 class="page-heading">
+          All The Futures I See With You 🧃✨
+        </h2>
+        <p class="page-subtitle">
+          Future coffee dates, future trips, future inside jokes — we’re not done yet.
+        </p>
+        <p class="message">
+          In the future, I see us randomly texting each other, “remember when we were so stressed in college?”
+          and then laughing about how far we’ve come. I see us taking random trips, buying each other small gifts,
+          sending each other memes about getting old but still being un-serious. 😌
+        </p>
+        <p class="message">
+          I want to be there for your big wins — your first job, your first big achievement, your happiest days.
+          And I also want to be there on your boring days, your messy days, and your “I hate everything” days.
+        </p>
+        <p class="message">
+          Basically, <b>present, past, future — you’re stuck with me.</b> No return policy. 🫶
+        </p>
+
+        <div class="wish-wall">
+          <div class="wish-card" style="animation-delay: 0.05s;">
+            🌸 More peace in your heart, even on the busy days.
+          </div>
+          <div class="wish-card" style="animation-delay: 0.15s;">
+            💖 More self-love, less overthinking, lots of soft moments.
+          </div>
+          <div class="wish-card" style="animation-delay: 0.25s;">
+            ✈️ New adventures, new places, same old us.
+          </div>
+          <div class="wish-card" style="animation-delay: 0.35s;">
+            📚 Success in everything you quietly pray about.
+          </div>
+          <div class="wish-card" style="animation-delay: 0.45s;">
+            😴 Better sleep, fewer 3am spirals, more 3am laughs.
+          </div>
+          <div class="wish-card" style="animation-delay: 0.55s;">
+            🤍 People who see your worth and protect your heart.
+          </div>
+        </div>
+
+        <a href="#page9" class="next-link">
+          Open mini scrapbook <span>➜</span>
+        </a>
+      </div>
+      <div>
+        <div class="photo-grid">
+          <img src="https://images.pexels.com/photos/1449794/pexels-photo-1449794.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Travel dreams" />
+          <img src="https://images.pexels.com/photos/1007079/pexels-photo-1007079.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Night sky" />
+          <img src="https://images.pexels.com/photos/33283/stack-of-books-vintage-books-book-books.jpg?auto=compress&cs=tinysrgb&w=600" alt="Future stories" />
+          <img src="https://images.pexels.com/photos/3951628/pexels-photo-3951628.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cozy future" />
+          <div class="photo-sticker">🌙</div>
+        </div>
+        <p class="photo-caption">
+          These photos are like soft predictions — we don’t know the exact future, but I know I want you in mine.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 9 -->
+  <section id="page9" class="page">
+    <div class="page-inner">
+      <div>
+        <div class="tagline-pill">
+          <span>📔</span> mini digital scrapbook
+        </div>
+        <h2 class="page-heading">
+          Little Polaroids In My Head 🎞️
+        </h2>
+        <p class="page-subtitle">
+          If my brain had a scrapbook, these are the pages with you in it.
+        </p>
+        <p class="message">
+          • You, laughing so hard you forget to breathe.  
+          • You, ranting about life and then getting distracted by a snack.  
+          • You, getting excited over the smallest things.  
+          • You, half asleep but still replying to my “are you okay?” messages.  
+        </p>
+        <p class="message">
+          You are the softest part of so many days. I just want this page to remind you: you don’t have to be perfect,
+          you just have to be <b>you</b>. That’s already more than enough.
+        </p>
+        <div class="sticker-row">
+          <div class="sticker">🎞️ memory lane</div>
+          <div class="sticker">💘 fav person alert</div>
+          <div class="sticker">🥺 permanently attached</div>
+        </div>
+        <a href="#page10" class="next-link">
+          Final birthday note <span>➜</span>
+        </a>
+      </div>
+      <div>
+        <div class="photo-grid">
+          <img src="https://images.pexels.com/photos/4668363/pexels-photo-4668363.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cute polaroids" />
+          <img src="https://images.pexels.com/photos/1394882/pexels-photo-1394882.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fairy lights" />
+          <img src="https://images.pexels.com/photos/1652497/pexels-photo-1652497.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pink setup" />
+          <img src="https://images.pexels.com/photos/1449053/pexels-photo-1449053.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Photo collage" />
+          <div class="photo-sticker">📸</div>
+        </div>
+        <p class="photo-caption">
+          Print these vibes in your heart — you’re loved, you’re wanted, and you’re worth celebrating.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 10 -->
+  <section id="page10" class="page page-alt">
+    <div class="page-inner">
+      <div>
+        <div class="tagline-pill">
+          <span>💖</span> the final (but not final) note
+        </div>
+        <h2 class="page-heading">
+          To My Forever Person 🤍
+        </h2>
+        <p class="page-subtitle">
+          It’s the last page of the website, but never the last page of us.
+        </p>
+        <p class="message">
+          Happy Birthday once again, my love, my chaos, my safe place, my best friend. I don’t know what I did
+          to deserve you, but I’m so grateful that somehow our lives crossed and decided to stay tangled. 🥹
+        </p>
+        <p class="message">
+          Please promise me one thing this year: be kinder to yourself. Talk to yourself the way you talk to me
+          when I’m hurting. You are not “too much”, you are not “not enough” — you are exactly, beautifully,
+          perfectly you.
+        </p>
+        <p class="message">
+          No matter how many birthdays come and go, you’ll always have a permanent place in my life.  
+          <b>Always, always, always.</b> 💘
+        </p>
+        <div class="emoji-row">
+          🎂 💖 🎀 ✨ 🥺 🫶
+        </div>
+
+        <!-- Secret nickname area -->
+        <div class="secret-container">
+          <p>
+            Tiny secret corner: type your nickname below so I know it’s really you, and I’ll show you one more tiny note. 😏💌
+          </p>
+          <div class="secret-row">
+            <input type="text" id="secretInput" placeholder="your nickname here..." />
+            <button id="secretBtn">Open secret note</button>
+          </div>
+          <div class="secret-error" id="secretError"></div>
+          <div class="secret-message" id="secretMessage">
+            Hey, it’s really you. 🤍  
+            Thank you for staying, for trying, for loving, for existing. No matter how chaotic life gets, I hope you always remember this: there is at least one person on this planet who will always choose you in every version of you — and that person is me.  
+            You are not a phase, you are my constant. 🌙
+          </div>
+        </div>
+
+        <a href="#page1" class="next-link">
+          Back to the beginning <span>↺</span>
+        </a>
+      </div>
+      <div>
+        <div class="photo-grid">
+          <img src="https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cake" />
+          <img src="https://images.pexels.com/photos/6266261/pexels-photo-6266261.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Celebration" />
+          <img src="https://images.pexels.com/photos/3819778/pexels-photo-3819778.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Friends hugging" />
+          <img src="https://images.pexels.com/photos/3826674/pexels-photo-3826674.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Birthday party" />
+          <div class="photo-sticker">🎂</div>
+        </div>
+        <p class="photo-caption">
+          Imagine us right here, cutting cake, laughing, existing softly, and pretending we’re not getting older. 😌
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    Made with <span>love</span>, overthinking, and way too many emotions. 💗
+  </footer>
+
+  <!-- IMAGE POPUP VIEWER -->
+  <div id="imgPopup">
+    <span id="closePopup">✖</span>
+    <img id="popupImage" src="">
+  </div>
+
+  <script>
+    // Smooth scroll & active nav highlight
+    // Play / Pause single MP3 song
+const bgMusic = document.getElementById("bgMusic");
+const musicToggle = document.getElementById("musicToggle");
+let isPlaying = false;
+
+if (bgMusic && musicToggle) {
+  musicToggle.addEventListener("click", () => {
+
+    if (!isPlaying) {
+      bgMusic.play();
+      isPlaying = true;
+      musicToggle.textContent = "⏸ Pause our song 🎵";
+    } else {
+      bgMusic.pause();
+      isPlaying = false;
+      musicToggle.textContent = "▶ Play our song 🎵";
+    }
+
+  });
+}
+
+
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", e => {
+        const targetId = link.getAttribute("href");
+        if (targetId && targetId.startsWith("#")) {
+          e.preventDefault();
+          document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+
+    const sections = document.querySelectorAll("section.page");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            navLinks.forEach(link => {
+              link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+            });
+            const inner = entry.target.querySelector(".page-inner");
+            if (inner) inner.classList.add("visible");
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.4
+      }
+    );
+
+    sections.forEach(section => observer.observe(section));
+
+    // Make first page visible on load
+    window.addEventListener("load", () => {
+      const firstInner = document.querySelector("#page1 .page-inner");
+      if (firstInner) firstInner.classList.add("visible");
+      typeMainHeading();
+      createHeartBurst();
+    });
+
+    // Image popup fullscreen
+    const allImages = document.querySelectorAll(".photo-grid img");
+    const popup = document.getElementById("imgPopup");
+    const popupImg = document.getElementById("popupImage");
+    const closeBtn = document.getElementById("closePopup");
+
+    allImages.forEach(img => {
+      img.addEventListener("click", () => {
+        popupImg.src = img.src;
+        popup.style.display = "flex";
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+
+    popup.addEventListener("click", e => {
+      if (e.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+
+    // Custom cursor movement
+    const cursorDot = document.getElementById("cursorDot");
+    document.addEventListener("mousemove", e => {
+      cursorDot.style.left = e.clientX + "px";
+      cursorDot.style.top = e.clientY + "px";
+    });
+
+    // Scroll progress
+    const scrollBar = document.getElementById("scrollBar");
+    window.addEventListener("scroll", () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      scrollBar.style.width = progress + "%";
+    });
+
+    // Typewriter effect for main heading
+    function typeMainHeading() {
+      const heading = document.getElementById("mainHeading");
+      const fullText = heading.textContent.trim();
+      heading.textContent = "";
+      let i = 0;
+      const speed = 70;
+      function type() {
+        if (i <= fullText.length) {
+          heading.textContent = fullText.slice(0, i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      type();
+    }
+
+    // Countdown (set her birthday here)
+    const countdownEl = document.getElementById("countdown");
+    const targetDate = new Date("2025-12-31T00:00:00"); // change this to real date
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        countdownEl.textContent = "Today is your day. +1 to your legend status 🎂✨";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      countdownEl.textContent =
+        `Counting down to your birthday: ${String(days).padStart(2, "0")}d ` +
+        `${String(hours).padStart(2, "0")}h ${String(mins).padStart(2, "0")}m ${String(secs).padStart(2, "0")}s 💖`;
+    }
+
+    if (countdownEl) {
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+
+    // Heart confetti burst
+    function createHeartBurst() {
+      const hearts = ["💖", "💕", "💓", "💘", "❤️‍🔥"];
+      for (let i = 0; i < 18; i++) {
+        const span = document.createElement("span");
+        span.className = "heart-confetti";
+        span.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+        const x = Math.random() * window.innerWidth;
+        const y = window.innerHeight - 40 + Math.random() * 20;
+        span.style.left = x + "px";
+        span.style.top = y + "px";
+        span.style.transition = "transform 2s, opacity 2s";
+        document.body.appendChild(span);
+        setTimeout(() => {
+          span.remove();
+        }, 2200);
+      }
+    }
+
+    const firstWishLink = document.getElementById("firstWishLink");
+    if (firstWishLink) {
+      firstWishLink.addEventListener("click", () => {
+        createHeartBurst();
+      });
+    }
+
+    // Memory tabs logic
+    const memoryButtons = document.querySelectorAll(".memory-tabs button");
+    const memoryPanels = document.querySelectorAll(".memory-panel");
+
+    memoryButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-target");
+        memoryButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        memoryPanels.forEach(panel => {
+          panel.classList.toggle("active", panel.id === target);
+        });
+      });
+    });
+
+    // Secret nickname logic
+    const secretInput = document.getElementById("secretInput");
+    const secretBtn = document.getElementById("secretBtn");
+    const secretError = document.getElementById("secretError");
+    const secretMessage = document.getElementById("secretMessage");
+
+    const SECRET_CODE = "bestie"; // change to her real nickname (lowercase)
+
+    secretBtn.addEventListener("click", () => {
+      const value = (secretInput.value || "").trim().toLowerCase();
+      if (!value) {
+        secretError.textContent = "Type something, drama queen. 😏";
+        secretMessage.classList.remove("visible");
+        return;
+      }
+      if (value === SECRET_CODE) {
+        secretError.textContent = "";
+        secretMessage.classList.add("visible");
+      } else {
+        secretError.textContent = "Wrong nickname 😤 Only the real you knows it.";
+        secretMessage.classList.remove("visible");
+      }
+    });
+
+   
+  </script>
+</body>
+</html>
