@@ -956,638 +956,752 @@
 
 </head>
 <body>
-  <!-- cursor glow -->
-  <div class="cursor-dot" id="cursorDot"></div>
+ <!-- cursor glow -->
+<div class="cursor-dot" id="cursorDot"></div>
 
-  <!-- scroll progress -->
-  <div id="scrollProgress">
-    <div id="scrollBar"></div>
-  </div>
-
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo-text">
-      <span>🎂</span> Happy Birthday, Bestie!
-    </div>
-    <nav class="nav-links">
-      <a href="#page1" class="active">Home</a>
-      <a href="#page2">Wishes</a>
-      <a href="#page3">Memories</a>
-      <a href="#page4">10 Things</a>
-      <a href="#page5">Our Chaos</a>
-      <a href="#page6">Photo Wall</a>
-      <a href="#page7">Letters</a>
-      <a href="#page8">Future Us</a>
-      <a href="#page9">Mini Scrapbook</a>
-      <a href="#page10">For You 💌</a>
-    </nav>
-  </header>
-
-  <!-- PAGE 1 -->
-  <section id="page1" class="page">
-    <div class="page-inner">
-      <div>
-        <div class="tagline-pill">
-          <span>🎀</span> Special edition: Your birthday
-        </div>
-        <h1 class="page-heading" id="mainHeading">
-          Happy Birthday, My Favourite Human 🥺❤️
-        </h1>
-        <p class="countdown" id="countdown"></p>
-        <p class="page-subtitle">
-          This little website is my handmade digital gift just for you. Every page is a tiny piece of my heart.
-        </p>
-        <p class="message">
-          Dear <b>Bestie</b>, from the first time we vibed over the smallest things to all the deep talks at
-          2 AM, you’ve been my safe place. Thank you for existing exactly the way you are — loud, soft, dramatic,
-          caring, all at once. Today is about <b>you</b>, your smile, your happiness and your dreams. 🎉
-        </p>
-        <p class="message">
-          I’m using this website to say what I probably don’t say enough: <b>you matter to me more than you know</b>.  
-          Swipe through the pages slowly, okay? This is our tiny love-filled corner of the internet. 💌
-        </p>
-        <div class="emoji-row">
-          ✨ 🎂 🎀 💖 🍰 🌸
-        </div>
-
-        <!-- Embedded YouTube music playlist -->
-       <div class="music-player" id="musicSection">
-  <h3 class="music-title">🎵 Our Birthday Song</h3>
-
-  <audio id="bgMusic" src="birthday-song.mp3" loop></audio>
-
-  <div class="music-buttons">
-    <button class="song-btn" id="musicToggle">▶ Play our song 🎵</button>
-  </div>
+<!-- scroll progress -->
+<div id="scrollProgress">
+  <div id="scrollBar"></div>
 </div>
 
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo-text">
+    <span>🎂</span> Happy Birthday, Bestie!
+  </div>
+  <nav class="nav-links">
+    <a href="#page1" class="active">Home</a>
+    <a href="#page2">Wishes</a>
+    <a href="#page3">Memories</a>
+    <a href="#page4">10 Things</a>
+    <a href="#page5">Our Chaos</a>
+    <a href="#page6">Photo Wall</a>
+    <a href="#page7">Letters</a>
+    <a href="#page8">Future Us</a>
+    <a href="#page9">Mini Scrapbook</a>
+    <a href="#page10">For You 💌</a>
+  </nav>
+</header>
 
-
-        <a href="#page2" class="next-link" id="firstWishLink">
-          Go to the first wish <span>➜</span>
-        </a>
+<!-- PAGE 1 -->
+<section id="page1" class="page">
+  <div class="page-inner">
+    <div>
+      <div class="tagline-pill">
+        <span>🎀</span> Special edition: Your birthday
       </div>
-      <div>
-        <div class="photo-grid">
-          <img src="./c1.jpg" alt="Best friends laughing" />
-          <img src="./c2.jpg" alt="Birthday cake" />
-          <img src="./c3.jpg" alt="Cute confetti" />
-          <img src="./c4.jpg"alt="Friends with balloons" />
-          <div class="photo-sticker">💖</div>
+
+      <h1 class="page-heading" id="mainHeading">
+        Happy Birthday, My Favourite Human 🥺❤️
+      </h1>
+
+      <!-- Countdown -->
+      <p class="countdown" id="countdown"></p>
+
+      <p class="page-subtitle">
+        This little website is my handmade digital gift just for you.
+        Every page is a tiny piece of my heart.
+      </p>
+
+      <p class="message">
+        Dear <b>Bestie</b>, from the first time we vibed over the smallest
+        things to all the deep talks at 2 AM, you’ve been my safe place.  
+        Thank you for existing exactly the way you are — loud, soft, dramatic,
+        caring, all at once.  
+        Today is about <b>you</b>, your smile, your happiness and your dreams. 🎉
+      </p>
+
+      <p class="message">
+        I’m using this website to say what I probably don’t say enough:
+        <b>you matter to me more than you know</b>.  
+        Swipe through the pages slowly, okay?
+        This is our tiny love-filled corner of the internet. 💌
+      </p>
+
+      <div class="emoji-row">✨ 🎂 🎀 💖 🍰 🌸</div>
+
+      <!-- Music Player -->
+      <div class="music-player" id="musicSection">
+        <h3 class="music-title">🎵 Our Birthday Song</h3>
+
+        <audio id="bgMusic" src="birthday-song.mp3" preload="auto" loop></audio>
+
+        <div class="music-buttons">
+          <button class="song-btn" id="musicToggle">▶ Play our song 🎵</button>
         </div>
-        <p class="photo-caption">
-          Just imagine these photos are all our chaotic, pretty, unfiltered memories together. One day,
-          we’ll recreate them for real. 📸
-        </p>
       </div>
+
+      <a href="#page2" class="next-link" id="firstWishLink">
+        Go to the first wish <span>➜</span>
+      </a>
     </div>
-  </section>
+
+    <!-- RIGHT SIDE PHOTOS -->
+    <div>
+      <div class="photo-grid">
+        <img src="./c1.jpg" alt="Best friends laughing" />
+        <img src="./c2.jpg" alt="Birthday cake" />
+        <img src="./c3.jpg" alt="Cute confetti" />
+        <img src="./c4.jpg" alt="Friends with balloons" />
+
+        <div class="photo-sticker">💖</div>
+      </div>
+
+      <p class="photo-caption">
+        Just imagine these photos are all our chaotic, pretty, unfiltered 
+        memories together. One day, we’ll recreate them for real. 📸
+      </p>
+    </div>
+  </div>
+</section>
 
   <!-- PAGE 2 -->
-  <section id="page2" class="page page-alt">
-    <div class="page-inner">
-      <div>
-        <div class="tagline-pill">
-          <span>💌</span> Birthday wish, straight from my heart
-        </div>
-        <h2 class="page-heading">
-          A Soft Birthday Wish For You 🌷
-        </h2>
-        <p class="page-subtitle">
-          I wish you peace, loud laughter, quiet comfort and everything you secretly pray about.
-        </p>
-        <p class="message">
-          On your birthday, I pray that every worry in your heart gets replaced with something gentle.
-          I hope the right people stay, the wrong ones fade, and you always have the strength to choose
-          <b>yourself</b>. I want you to wake up every day and feel loved — not just by the world, but by
-          your own reflection too. 💫
-        </p>
-        <p class="message">
-          I wish you friendships that feel like home, opportunities that make you proud, and little surprises
-          that make you randomly smile in public like an idiot. And in all of that, I wish you never forget:
-          <b>you’re never alone, because I’m always one text away.</b> 📱❤️
-        </p>
-        <div class="sticker-row">
-          <div class="sticker">🎂 main character energy</div>
-          <div class="sticker">💖 emotionally precious</div>
-          <div class="sticker">🌙 soft girl vibes</div>
-        </div>
-        <a href="#page3" class="next-link">
-          Dive into our memories <span>➜</span>
-        </a>
+<section id="page2" class="page page-alt">
+  <div class="page-inner">
+    <div>
+      <div class="tagline-pill">
+        <span>💌</span> Birthday wish, straight from my heart
       </div>
-      <div>
-        <div class="photo-grid">
-          <img src="https://images.pexels.com/photos/10401591/pexels-photo-10401591.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Holding hands" />
-          <img src="./pic1.webp" alt="Gift box" />
-          <img src="./pic1.webp" alt="Gift box" />
-          <img src="https://images.pexels.com/photos/5220070/pexels-photo-5220070.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cute celebration" />
-          <div class="photo-sticker">🎀</div>
-        </div>
-        <p class="photo-caption">
-          These are not our real photos, but the feeling? 100% ours: soft, safe, and a little dramatic. 😌
-        </p>
+
+      <h2 class="page-heading">A Soft Birthday Wish For You 🌷</h2>
+
+      <p class="page-subtitle">
+        I wish you peace, loud laughter, quiet comfort, and everything you secretly pray about.
+      </p>
+
+      <p class="message">
+        On your birthday, I pray that every worry in your heart gets replaced with something gentle.
+        I hope the right people stay, the wrong ones fade, and you always have the strength to choose
+        <b>yourself</b>.  
+        I want you to wake up every day and feel loved — not just by the world, but by your own reflection too. 💫
+      </p>
+
+      <p class="message">
+        I wish you friendships that feel like home, opportunities that make you proud, and little surprises
+        that make you randomly smile in public like an idiot.  
+        And in all of that, I hope you never forget:
+        <b>you’re never alone, because I’m always one text away.</b> 📱❤️
+      </p>
+
+      <div class="sticker-row">
+        <div class="sticker">🎂 main character energy</div>
+        <div class="sticker">💖 emotionally precious</div>
+        <div class="sticker">🌙 soft girl vibes</div>
       </div>
+
+      <a href="#page3" class="next-link">
+        Dive into our memories <span>➜</span>
+      </a>
     </div>
-  </section>
 
-  <!-- PAGE 3 -->
-  <section id="page3" class="page">
-    <div class="page-inner">
-      <div>
-        <div class="tagline-pill">
-          <span>📸</span> Tiny memories, huge impact
+    <div>
+      <div class="photo-grid">
+        <img src="https://images.pexels.com/photos/10401591/pexels-photo-10401591.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Warm moment" />
+        <img src="./pic1.webp" alt="Cute gift" />
+        <img src="./pic2.webp" alt="Pretty box" />
+        <img src="https://images.pexels.com/photos/5220070/pexels-photo-5220070.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Small celebration" />
+
+        <div class="photo-sticker">🎀</div>
+      </div>
+
+      <p class="photo-caption">
+        These aren’t our real photos — but the feeling?  
+        100% ours: soft, safe, dramatic, and very us. 😌
+      </p>
+    </div>
+  </div>
+</section>
+<!-- PAGE 3 -->
+<section id="page3" class="page">
+  <div class="page-inner">
+    <div>
+      <div class="tagline-pill">
+        <span>📸</span> Tiny memories, huge impact
+      </div>
+
+      <h2 class="page-heading">
+        Our Little Moments That Live Rent-Free In My Head 🧠💘
+      </h2>
+
+      <a></a>
+      <p class="page-subtitle">
+        Not grand gestures — just the moments that made me realise:
+        “yup, this one is my person.”
+      </p>
+
+      <p class="message">
+        I still remember <b>that one random day</b> when we laughed so much that our stomach hurt.
+        And the time when I was breaking inside and you stayed — no lecture, no judgement…
+        just presence. And that meant everything.
+      </p>
+
+      <p class="message">
+        We’ve shared silly selfies, ugly crying, random reels, panicky pre-exam calls,  
+        and long voice notes when text wasn’t enough.  
+        If someone asked me to define comfort, I’d send them a screenshot of our chats. 📂
+      </p>
+
+      <!-- Memory Tabs -->
+      <div class="memory-tabs">
+        <button class="active" data-target="mem-funny">Funny moments 😂</button>
+        <button data-target="mem-soft">Soft moments 🥺</button>
+        <button data-target="mem-chaos">Our chaos 🤪</button>
+      </div>
+
+      <div class="memory-panel active" id="mem-funny">
+        • That time we laughed at something stupid for 10 minutes straight.  
+        • Our “we’ll start studying at 5” plans that turned into reel marathons.  
+        • The random filters we try only to send each other ugly selfies.
+      </div>
+
+      <div class="memory-panel" id="mem-soft">
+        • You checking on me with “reached?” even when you’re tired.  
+        • Quiet calls where we barely talk but still feel better.  
+        • The way you somehow know I’m not okay even when I say “I’m fine.”
+      </div>
+
+      <div class="memory-panel" id="mem-chaos">
+        • Our dramatic pre-exam panic + last-minute motivation speeches.  
+        • Sharing life updates like a daily news bulletin.  
+        • Surviving drama + overthinking and still laughing at the end.
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">Day 1</div>
+          <div class="timeline-text">
+            We went from strangers → “okay yes, this one is my person.”
+          </div>
         </div>
-        <h2 class="page-heading">
-          Our Little Moments That Live Rent-Free In My Head 🧠💘
-        </h2>
-        <p class="page-subtitle">
-          Not grand gestures, just the small moments where I realised — “yup, this one is my person”.
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">Random evening</div>
+          <div class="timeline-text">
+            We laughed until our cheeks hurt and our brains stopped working.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">One heavy night</div>
+          <div class="timeline-text">
+            You stayed. No speech. No advice. Just presence. And that healed more than you know.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">Today</div>
+          <div class="timeline-text">
+            You’re still my safest person. And we’re still choosing each other.
+          </div>
+        </div>
+      </div>
+
+      <a href="#page4" class="next-link">
+        10 things I adore about you <span>➜</span>
+      </a>
+    </div>
+
+    <div>
+      <div class="photo-grid">
+        <img src="https://images.pexels.com/photos/7084400/pexels-photo-7084400.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Selfie moment" />
+        <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Laughing together" />
+        <img src="https://images.pexels.com/photos/3844782/pexels-photo-3844782.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Coffee conversation" />
+        <img src="https://images.pexels.com/photos/3320902/pexels-photo-3320902.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Candid joy" />
+
+        <div class="photo-sticker">✨</div>
+      </div>
+
+      <p class="photo-caption">
+        One day we’ll replace these stock images with our real chaos pics —  
+        and this page will become legendary.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+ <!-- PAGE 4 -->
+<section id="page4" class="page page-alt">
+  <div class="page-inner">
+    <div>
+      <div class="tagline-pill">
+        <span>🌹</span> 10 little love notes
+      </div>
+
+      <h2 class="page-heading">10 Things I Absolutely Love About You 💘</h2>
+
+      <p class="page-subtitle">
+        I could write a whole book, but here’s a tiny list I’ll start with.
+      </p>
+
+      <p class="message" style="margin-bottom:0.6rem;">
+        These are the little things that make you, well — you. And that’s exactly why you’re so precious.
+      </p>
+
+      <!-- 10 things I love list -->
+      <ul class="love-list" aria-label="Ten things I love about you">
+        <li>Your laugh, especially when you try to hide it. 😭</li>
+        <li>The way you care about people more than you admit. 🤍</li>
+        <li>Your random “did you eat?” messages. 🥺</li>
+        <li>Your quiet strength, even when you don’t feel strong. 🌱</li>
+        <li>The way you hype me up like I’m a celebrity. ✨</li>
+        <li>Your mood swings — yes, even those. They’re very you. 😌</li>
+        <li>How you remember tiny details about me. 🎯</li>
+        <li>Your ability to survive drama and still smile. 💪</li>
+        <li>The way you love deeply, silently, genuinely. 💖</li>
+        <li>Simply: that you are <b>you</b>, and not trying to be anyone else. 🫶</li>
+      </ul>
+
+      <p class="message" style="margin-top:1rem;">
+        And words sometimes fall short, so here are a few little promises from me:
+      </p>
+
+      <!-- Promises list -->
+      <ul class="promise-list" aria-label="Ten promises to you">
+        <li>I’ll always remind you how precious you are.</li>
+        <li>I’ll pick up your calls even when I’m half asleep.</li>
+        <li>I’ll hype you up like you’re the main character.</li>
+        <li>I’ll listen to your rants without saying “it’s not that deep”.</li>
+        <li>I’ll protect your secrets like they’re locked in a diary.</li>
+        <li>I’ll send memes on your bad days until you smile.</li>
+        <li>I’ll be honest with you, even when it’s uncomfortable.</li>
+        <li>I’ll always wish the softest things for your heart.</li>
+        <li>I’ll stay — even when life gets busy and messy.</li>
+        <li>I’ll always be proud of you, loudly and quietly. 🎀</li>
+      </ul>
+
+      <div style="margin-top:0.9rem; display:flex; gap:0.6rem; align-items:center;">
+        <button class="song-btn" onclick="createHeartBurst()">Make a wish ✨</button>
+        <span style="font-size:0.82rem; color:var(--pink-soft); opacity:0.95;">
+          (Click for a little magic)
+        </span>
+      </div>
+
+      <div class="emoji-row">
+        💗 😭 🌸 🎀 🎧 ✨
+      </div>
+
+      <a href="#page5" class="next-link">
+        Our chaotic side <span>➜</span>
+      </a>
+    </div>
+
+    <div>
+      <div class="photo-grid">
+        <img src="https://images.pexels.com/photos/853406/pexels-photo-853406.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Heart hands" />
+        <img src="https://images.pexels.com/photos/5735486/pexels-photo-5735486.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cute notes" />
+        <img src="https://images.pexels.com/photos/1028725/pexels-photo-1028725.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Flowers" />
+        <img src="https://images.pexels.com/photos/2072175/pexels-photo-2072175.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pink vibe" />
+        <div class="photo-sticker">🌸</div>
+      </div>
+
+      <p class="photo-caption">
+        These soft aesthetic photos match the vibes of this page —  
+        but in real life, it’s you who makes everything aesthetic.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 5 -->
+<section id="page5" class="page">
+  <div class="page-inner">
+    <div>
+      <div class="tagline-pill">
+        <span>🤪</span> The chaos we call friendship
+      </div>
+
+      <h2 class="page-heading">
+        Our Drama, Our Cringe, Our Inside Jokes 😂
+      </h2>
+
+      <p class="page-subtitle">
+        If someone saw our chat screenshots, they’d be concerned. And honestly… fair.
+      </p>
+
+      <p class="message">
+        Thank you for sending me weird reels at 2 AM, giving me “gyaan” and then doing the exact opposite,
+        and being my partner in “we’re tired but still laughing” chaos.
+      </p>
+
+      <p class="message">
+        Our friendship is 50% overthinking, 50% nonsense and 100% comfort.  
+        We can go from “I hate everyone” to “look at this cute dog” in 0.2 seconds.  
+        Life would be so painfully boring without you — my favourite little problem. 🫶
+      </p>
+
+      <div class="sticker-row">
+        <div class="sticker">📲 148 missed voice notes</div>
+        <div class="sticker">🍟 emotional support snacks</div>
+        <div class="sticker">🤣 “we’ll study from tomorrow”</div>
+      </div>
+
+      <a href="#page6" class="next-link">
+        Scroll to the photo wall <span>➜</span>
+      </a>
+    </div>
+
+    <div>
+      <div class="photo-grid">
+        <img src="https://images.pexels.com/photos/5259825/pexels-photo-5259825.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Laughing" />
+        <img src="https://images.pexels.com/photos/5531541/pexels-photo-5531541.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hanging out" />
+        <img src="https://images.pexels.com/photos/8580800/pexels-photo-8580800.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Friends being silly" />
+        <img src="https://images.pexels.com/photos/5185133/pexels-photo-5185133.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fun moments" />
+        <div class="photo-sticker">😂</div>
+      </div>
+
+      <p class="photo-caption">
+        Imagine these are our funniest candids + terrible angles that we still keep because they’re iconic.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 6 -->
+<section id="page6" class="page page-alt">
+  <div class="page-inner">
+    <div>
+      <div class="tagline-pill">
+        <span>🖼️</span> Photo wall, but digital
+      </div>
+
+      <h2 class="page-heading">
+        Our Aesthetic Photo Scrapboard 📷✨
+      </h2>
+
+      <p class="page-subtitle">
+        One day this will be a collage of our real photos.  
+        For now, it’s a moodboard of us.
+      </p>
+
+      <p class="message">
+        Every picture here is just a placeholder — but the vibe feels like us.  
+        Laughing, walking, dreaming, surviving life side by side.
+      </p>
+
+      <p class="message">
+        Keep all your selfies, even the ugly ones.  
+        Especially the ugly ones — they’re proof of how real we are. 🤭
+      </p>
+
+      <a href="#page7" class="next-link">
+        Open the letters page <span>➜</span>
+      </a>
+    </div>
+
+    <div>
+      <div class="photo-grid">
+        <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Best friends" />
+        <img src="https://images.pexels.com/photos/10401943/pexels-photo-10401943.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Polaroid memories" />
+        <img src="https://images.pexels.com/photos/1064000/pexels-photo-1064000.jpeg?auto=compress&cs=tinysrgb&w=600" alt="City lights" />
+        <img src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Holding balloons" />
+        <div class="photo-sticker">📷</div>
+      </div>
+
+      <p class="photo-caption">
+        Replace these with your own pictures to turn this into a real scrapbook of your friendship.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 7 -->
+<section id="page7" class="page">
+  <div class="page-inner">
+    <div>
+      <div class="tagline-pill">
+        <span>💌</span> letter, not just a message
+      </div>
+
+      <h2 class="page-heading">A Tiny Birthday Letter For You ✍🏼</h2>
+
+      <p class="page-subtitle">
+        If I had a pen and paper, it would still say the same things — straight from my heart to yours.
+      </p>
+
+      <p class="message">
+        Dear bestie, if you ever feel lost, read this again: <b>you are precious.</b>  
+        Your heart, your mind, your existence — they add softness to this world.  
+        There are people who feel safe because you exist.  
+        I am one of them.
+      </p>
+
+      <p class="message">
+        I know life is not always kind. Some days hurt, some nights feel heavy,  
+        and some thoughts get too loud. But please don’t forget —  
+        you have someone who will always choose you, stay with you,  
+        and annoy you with random “I love you idiot” texts.  
+        That someone is me. 🤍
+      </p>
+
+      <p class="message">
+        You deserve everything gentle in this world.  
+        Never settle for less than the kind of love you give.
+      </p>
+
+      <div class="emoji-row">🤍 ✨ 🕊️ 🎂 🌙</div>
+
+      <a href="#page8" class="next-link">
+        Turn the page to “Future Us” <span>➜</span>
+      </a>
+    </div>
+
+    <div>
+      <div class="photo-grid">
+        <img src="https://images.pexels.com/photos/883466/pexels-photo-883466.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Writing a letter" />
+        <img src="https://images.pexels.com/photos/4195342/pexels-photo-4195342.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cozy letter" />
+        <img src="https://images.pexels.com/photos/6322476/pexels-photo-6322476.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hands & paper" />
+        <img src="https://images.pexels.com/photos/6311651/pexels-photo-6311651.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Letter & flowers" />
+        <div class="photo-sticker">💌</div>
+      </div>
+
+      <p class="photo-caption">
+        This page is for the words we don’t say aloud every day —  
+        but always feel. Keep this close.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 8 -->
+<section id="page8" class="page page-alt">
+  <div class="page-inner">
+    <div>
+
+      <div class="tagline-pill">
+        <span>🌙</span> manifesting soft futures
+      </div>
+
+      <h2 class="page-heading">All The Futures I See With You 🧃✨</h2>
+
+      <p class="page-subtitle">
+        Future coffee dates, future trips, future inside jokes — we’re not done yet.
+      </p>
+
+      <p class="message">
+        In the future, I see us texting,  
+        “Remember when we were so stressed in college?”  
+        and then laughing about how far we’ve come.
+      </p>
+
+      <p class="message">
+        I want to be there for your big wins,  
+        your quiet days, your chaotic days,  
+        and even your “I hate everything” days.
+      </p>
+
+      <p class="message">
+        Basically, <b>present, past, future — you’re stuck with me.</b>  
+        No return policy. 🫶
+      </p>
+
+      <div class="wish-wall">
+        <div class="wish-card" style="animation-delay: 0.05s;">🌸 More peace in your heart, even on busy days.</div>
+        <div class="wish-card" style="animation-delay: 0.15s;">💖 More self-love, less overthinking.</div>
+        <div class="wish-card" style="animation-delay: 0.25s;">✈️ New adventures, same old us.</div>
+        <div class="wish-card" style="animation-delay: 0.35s;">📚 Success in everything you pray for.</div>
+        <div class="wish-card" style="animation-delay: 0.45s;">😴 Fewer 3am spirals, more 3am laughs.</div>
+        <div class="wish-card" style="animation-delay: 0.55s;">🤍 People who protect your heart.</div>
+      </div>
+
+      <a href="#page9" class="next-link">
+        Open mini scrapbook <span>➜</span>
+      </a>
+    </div>
+
+    <div>
+      <div class="photo-grid">
+        <img src="https://images.pexels.com/photos/1449794/pexels-photo-1449794.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Travel dreams" />
+        <img src="https://images.pexels.com/photos/1007079/pexels-photo-1007079.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Night sky" />
+        <img src="https://images.pexels.com/photos/33283/stack-of-books-vintage-books-book-books.jpg?auto=compress&cs=tinysrgb&w=600" alt="Future stories" />
+        <img src="https://images.pexels.com/photos/3951628/pexels-photo-3951628.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cozy future" />
+        <div class="photo-sticker">🌙</div>
+      </div>
+
+      <p class="photo-caption">
+        These photos are soft predictions —  
+        we don’t know the exact future,  
+        but I know I want you in mine.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 9 -->
+<section id="page9" class="page">
+  <div class="page-inner">
+    <div>
+
+      <div class="tagline-pill">
+        <span>📔</span> mini digital scrapbook
+      </div>
+
+      <h2 class="page-heading">Little Polaroids In My Head 🎞️</h2>
+
+      <p class="page-subtitle">
+        If my brain had a scrapbook, these are the pages with you in it.
+      </p>
+
+      <p class="message">
+        • You laughing so hard you forget to breathe. <br>
+        • You ranting about life and getting distracted by snacks. <br>
+        • You getting excited over the smallest things. <br>
+        • You half asleep but still replying to “are you okay?”  
+      </p>
+
+      <p class="message">
+        You are the softest part of so many days.  
+        This page is just a reminder:  
+        you don’t have to be perfect — just <b>you</b>.  
+        That’s already more than enough.
+      </p>
+
+      <div class="sticker-row">
+        <div class="sticker">🎞️ memory lane</div>
+        <div class="sticker">💘 fav person alert</div>
+        <div class="sticker">🥺 permanently attached</div>
+      </div>
+
+      <a href="#page10" class="next-link">
+        Final birthday note <span>➜</span>
+      </a>
+    </div>
+
+    <div>
+      <div class="photo-grid">
+        <img src="https://images.pexels.com/photos/4668363/pexels-photo-4668363.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cute polaroids" />
+        <img src="https://images.pexels.com/photos/1394882/pexels-photo-1394882.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fairy lights" />
+        <img src="https://images.pexels.com/photos/1652497/pexels-photo-1652497.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pink setup" />
+        <img src="https://images.pexels.com/photos/1449053/pexels-photo-1449053.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Photo collage" />
+        <div class="photo-sticker">📸</div>
+      </div>
+
+      <p class="photo-caption">
+        Print these vibes in your heart —  
+        you are loved, wanted, and worth celebrating.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- PAGE 10 -->
+<section id="page10" class="page page-alt">
+  <div class="page-inner">
+    <div>
+
+      <div class="tagline-pill">
+        <span>💖</span> the final (but not final) note
+      </div>
+
+      <h2 class="page-heading">To My Forever Person 🤍</h2>
+
+      <p class="page-subtitle">
+        It’s the last page of the website… but never the last page of us.
+      </p>
+
+      <p class="message">
+        Happy Birthday once again, my love, my chaos, my safe place, my best friend.  
+        I don’t know what I did in life to deserve someone like you — someone so warm, so soft,
+        so wildly precious — but I thank the universe every day that our paths crossed and decided  
+        to stay tangled. 🥹
+      </p>
+
+      <p class="message">
+        Please promise me one thing this year: <b>be kinder to yourself.</b>  
+        Talk to yourself the same way you talk to me when I’m hurting.  
+        You are not “too much”, and you are definitely not “not enough.”  
+        You are beautifully, wonderfully, impossibly you — and that is your magic.
+      </p>
+
+      <p class="message">
+        No matter how many birthdays we celebrate,  
+        no matter how much life changes…  
+        <b>you will always have a permanent place in my life.</b>  
+        Always, always, always. 💘
+      </p>
+
+      <div class="emoji-row">
+        🎂 💖 🎀 ✨ 🥺 🫶
+      </div>
+
+      <!-- SECRET NICKNAME AREA -->
+      <div class="secret-container">
+        <p>
+          Tiny secret corner: type your nickname below so I know it’s really you,  
+          and I’ll show you one last hidden note. 😏💌
         </p>
-        <p class="message">
-          I still remember <b>that one random day</b> when we laughed so much that our stomachs actually hurt.
-          Or the time when I was totally broken inside and you quietly stayed with me, no big lecture, just
-          presence — and that meant everything.
-        </p>
-        <p class="message">
-          We’ve shared silly selfies, ugly crying, random reels, panicky calls before exams, and long voice notes
-          when text wasn’t enough. If someone asked me to define comfort, I’d send them a screenshot of our chats. 📂
-        </p>
 
-        <div class="memory-tabs">
-          <button class="active" data-target="mem-funny">Funny moments 😂</button>
-          <button data-target="mem-soft">Soft moments 🥺</button>
-          <button data-target="mem-chaos">Our chaos 🤪</button>
+        <div class="secret-row">
+          <input id="secretInput" type="text" placeholder="your nickname here..." />
+          <button id="secretBtn">Open secret note</button>
         </div>
 
-        <div class="memory-panel active" id="mem-funny">
-          • That one time we laughed at something so stupid and couldn’t stop for 10 minutes straight.  
-          • All our “we’ll start studying at 5” plans that turned into reel marathons.  
-          • The random filters we try just to send each other ugly selfies.
-        </div>
-        <div class="memory-panel" id="mem-soft">
-          • You checking on me with “reached?” even when you’re tired.  
-          • The quiet calls where we don’t talk much but still feel better.  
-          • The way you somehow know when I’m not okay, even when I say “I’m fine”.
-        </div>
-        <div class="memory-panel" id="mem-chaos">
-          • Our last-minute exam panic + motivational speeches.  
-          • Sharing life updates like a daily news bulletin.  
-          • Surviving drama, overthinking, and still somehow laughing at the end.  
-        </div>
+        <div id="secretError" class="secret-error"></div>
 
-        <div class="timeline">
-  <div class="timeline-item">
-    <div class="timeline-dot"></div>
-    <div class="timeline-year">Day 1</div>
-    <div class="timeline-text">We went from strangers → “ok this one is my person.”</div>
+        <div id="secretMessage" class="secret-message">
+          Hey… it’s really you. 🤍  
+          Thank you for staying, for trying, for loving, for simply existing.  
+          No matter how chaotic the world becomes, I hope you carry this truth gently:
+          there is at least one person on this planet who will always choose you —  
+          in every version, every mood, every season.  
+          <br><br>
+          You’re not a phase.  
+          You’re my constant. 🌙
+        </div>
+      </div>
+
+      <a href="#page1" class="next-link">
+        Back to the beginning <span>↺</span>
+      </a>
+
+    </div>
+
+    <div>
+      <div class="photo-grid">
+        <img src="https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cake" />
+        <img src="https://images.pexels.com/photos/6266261/pexels-photo-6266261.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Celebration" />
+        <img src="https://images.pexels.com/photos/3819778/pexels-photo-3819778.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Friends hugging" />
+        <img src="https://images.pexels.com/photos/3826674/pexels-photo-3826674.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Birthday party" />
+        <div class="photo-sticker">🎂</div>
+      </div>
+
+      <p class="photo-caption">
+        Imagine us here — cutting cake, laughing, existing gently,  
+        and pretending we’re not getting older. 😌  
+      </p>
+    </div>
   </div>
-  <div class="timeline-item">
-    <div class="timeline-dot"></div>
-    <div class="timeline-year">Random evening</div>
-    <div class="timeline-text">We laughed so much that our cheeks and stomach hurt.</div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-dot"></div>
-    <div class="timeline-year">One heavy night</div>
-    <div class="timeline-text">You stayed. No big speech. Just presence. And that was everything.</div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-dot"></div>
-    <div class="timeline-year">Today</div>
-    <div class="timeline-text">You’re still my safest person. We’re still choosing each other.</div>
-  </div>
+</section>
+
+
+ <footer class="footer">
+  Made with <span>love</span>, overthinking, and way too many emotions. 💗
+</footer>
+
+<!-- IMAGE POPUP VIEWER -->
+<div id="imgPopup">
+  <span id="closePopup">✖</span>
+  <img id="popupImage" src="">
 </div>
 
-        <a href="#page4" class="next-link">
-          10 things I adore about you <span>➜</span>
-        </a>
-      </div>
-      <div>
-        <div class="photo-grid">
-          <img src="https://images.pexels.com/photos/7084400/pexels-photo-7084400.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Friends taking selfie" />
-          <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Laughing together" />
-          <img src="https://images.pexels.com/photos/3844782/pexels-photo-3844782.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Coffee and talk" />
-          <img src="https://images.pexels.com/photos/3320902/pexels-photo-3320902.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Candid moment" />
-          <div class="photo-sticker">✨</div>
-        </div>
-        <p class="photo-caption">
-          One day we’ll replace these stock images with our real chaos photos and this page will become legendary.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PAGE 4 -->
-  <section id="page4" class="page page-alt">
-    <div class="page-inner">
-      <div>
-        <div class="tagline-pill">
-          <span>🌹</span> 10 little love notes
-        </div>
-        <h2 class="page-heading">
-          10 Things I Absolutely Love About You 💘
-        </h2>
-        <p class="page-subtitle">
-          I could write a whole book, but here’s a tiny list I’ll start with.
-       <p class="message" style="margin-bottom:0.6rem;">
-  I could write a whole book about why you’re special, but here are the little things that make you, well — you.
-</p>
-
-<ul class="love-list" aria-label="Ten things I love about you">
-  <li>Your laugh, especially when you try to hide it. 😭</li>
-  <li>The way you care about people more than you admit. 🤍</li>
-  <li>Your random “did you eat?” messages. 🥺</li>
-  <li>Your quiet strength, even when you don’t feel strong. 🌱</li>
-  <li>The way you hype me up like I’m a celebrity. ✨</li>
-  <li>Your mood swings — yes, even those. They’re very you. 😌</li>
-  <li>How you remember tiny details about me. 🎯</li>
-  <li>Your ability to survive drama and still smile. 💪</li>
-  <li>The way you love deeply, silently, genuinely. 💖</li>
-  <li>Simply: that you are <b>you</b>, and not trying to be anyone else. 🫶</li>
-</ul>
-
-<p class="message" style="margin-top:1rem;">
-  And because words sometimes fall short, here are a few tiny promises I want to keep for you:
-</p>
-
-<ul class="promise-list" aria-label="Ten promises to you">
-  <li>I’ll always remind you how precious you are.</li>
-  <li>I’ll pick up your calls even when I’m half asleep.</li>
-  <li>I’ll hype you up like you’re the main character (because you are).</li>
-  <li>I’ll listen to your rants without saying “it’s not that deep”.</li>
-  <li>I’ll protect your secrets like they’re locked in a diary.</li>
-  <li>I’ll send memes on your bad days until you smile.</li>
-  <li>I’ll be honest with you, even when it’s uncomfortable.</li>
-  <li>I’ll always wish the softest things for your heart.</li>
-  <li>I’ll stay, even when life gets busy and messy.</li>
-  <li>I’ll always be proud of you — loudly and quietly. 🎀</li>
-</ul>
-
-<div style="margin-top:0.9rem; display:flex; gap:0.6rem; align-items:center;">
-  <button class="song-btn" onclick="createHeartBurst()">Make a wish ✨</button>
-  <span style="font-size:0.82rem; color:var(--pink-soft); opacity:0.95;">
-    (Click to send a little heart burst)
-  </span>
-</div>
-
-
-        <div class="emoji-row">
-          💗 😭 🌸 🎀 🎧 ✨
-        </div>
-
-        <a href="#page5" class="next-link">
-          Our chaotic side <span>➜</span>
-        </a>
-      </div>
-      <div>
-        <div class="photo-grid">
-          <img src="https://images.pexels.com/photos/853406/pexels-photo-853406.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Heart hands" />
-          <img src="https://images.pexels.com/photos/5735486/pexels-photo-5735486.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cute notes" />
-          <img src="https://images.pexels.com/photos/1028725/pexels-photo-1028725.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Flowers" />
-          <img src="https://images.pexels.com/photos/2072175/pexels-photo-2072175.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pink vibe" />
-          <div class="photo-sticker">🌸</div>
-        </div>
-        <p class="photo-caption">
-          These are the “soft aesthetic” stickers of this page. In real life, it’s you who makes everything aesthetic.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PAGE 5 -->
-  <section id="page5" class="page">
-    <div class="page-inner">
-      <div>
-        <div class="tagline-pill">
-          <span>🤪</span> The chaos we call friendship
-        </div>
-        <h2 class="page-heading">
-          Our Drama, Our Cringe, Our Inside Jokes 😂
-        </h2>
-        <p class="page-subtitle">
-          If someone saw our chat screenshots, they’d be concerned. And honestly… fair.
-        </p>
-        <p class="message">
-          Thank you for sending me weird reels at 2 AM, giving me “gyaan” and then doing the exact opposite yourself,
-          and for being my partner in “we’re tired but still laughing” kind of moments. Our friendship is 50% deep talk,
-          50% nonsense, and 100% comfort.
-        </p>
-        <p class="message">
-          I love that we can go from “I hate everyone” to “look at this cute dog” in the same conversation. Life would
-          be so painfully boring without you. You are my favourite little problem. 🫶
-        </p>
-        <div class="sticker-row">
-          <div class="sticker">📲 148 missed voice notes</div>
-          <div class="sticker">🍟 emotional support snacks</div>
-          <div class="sticker">🤣 “we’ll study from tomorrow”</div>
-        </div>
-        <a href="#page6" class="next-link">
-          Scroll to the photo wall <span>➜</span>
-        </a>
-      </div>
-      <div>
-        <div class="photo-grid">
-          <img src="https://images.pexels.com/photos/5259825/pexels-photo-5259825.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Laughing" />
-          <img src="https://images.pexels.com/photos/5531541/pexels-photo-5531541.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hanging out" />
-          <img src="https://images.pexels.com/photos/8580800/pexels-photo-8580800.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Friends being silly" />
-          <img src="https://images.pexels.com/photos/5185133/pexels-photo-5185133.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fun moments" />
-          <div class="photo-sticker">😂</div>
-        </div>
-        <p class="photo-caption">
-          Imagine these are our funniest candids and unflattering angles that we still keep because they’re “iconic”.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PAGE 6 -->
-  <section id="page6" class="page page-alt">
-    <div class="page-inner">
-      <div>
-        <div class="tagline-pill">
-          <span>🖼️</span> Photo wall, but digital
-        </div>
-        <h2 class="page-heading">
-          Our Aesthetic Photo Scrapboard 📷✨
-        </h2>
-        <p class="page-subtitle">
-          One day this will be a collage of our real photos. For now, it’s a moodboard of us.
-        </p>
-        <p class="message">
-          Each picture here is just a placeholder, but the feeling behind it is so real. I see us in every
-          vibe — walking, laughing, looking at the sky, surviving life together. I hope, years from now,
-          we look back at our pictures and think: <b>“we really grew up together.”</b>
-        </p>
-        <p class="message">
-          Keep all your selfies, even the ugly ones. Especially the ugly ones. They’re proof of how real we are. 🤭
-        </p>
-        <a href="#page7" class="next-link">
-          Open the letters page <span>➜</span>
-        </a>
-      </div>
-      <div>
-        <div class="photo-grid">
-          <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Best friends" />
-          <img src="https://images.pexels.com/photos/10401943/pexels-photo-10401943.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Polaroid memories" />
-          <img src="https://images.pexels.com/photos/1064000/pexels-photo-1064000.jpeg?auto=compress&cs=tinysrgb&w=600" alt="City lights" />
-          <img src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Holding balloons" />
-          <div class="photo-sticker">📷</div>
-        </div>
-        <p class="photo-caption">
-          Replace these image links with your own pictures to turn this into a real memory wall of your birthday.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PAGE 7 -->
-  <section id="page7" class="page">
-    <div class="page-inner">
-      <div>
-        <div class="tagline-pill">
-          <span>💌</span> letter, not just a message
-        </div>
-        <h2 class="page-heading">
-          A Tiny Birthday Letter For You ✍🏼
-        </h2>
-        <p class="page-subtitle">
-          If I had a pen and paper, it would still say the same things — straight from my heart to yours.
-        </p>
-        <p class="message">
-          Dear bestie, if you ever feel lost, read this again: <b>you are precious.</b> Your heart, your mind,
-          your existence — they add softness to this world. There are people who feel safe because you exist.
-          I am one of them.
-        </p>
-        <p class="message">
-          I know life is not always kind. Some days are heavier, some nights are a bit louder inside your head.
-          But please don’t forget that you have someone who will always choose you, stand by you, and annoy you
-          with random “I love you, idiot” texts. That someone is me. 🤍
-        </p>
-        <p class="message">
-          You deserve everything gentle in this world. Never settle for less than the kind of love you give.
-        </p>
-        <div class="emoji-row">
-          🤍 ✨ 🕊️ 🎂 🌙
-        </div>
-        <a href="#page8" class="next-link">
-          Turn the page to “Future Us” <span>➜</span>
-        </a>
-      </div>
-      <div>
-        <div class="photo-grid">
-          <img src="https://images.pexels.com/photos/883466/pexels-photo-883466.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Writing a letter" />
-          <img src="https://images.pexels.com/photos/4195342/pexels-photo-4195342.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cozy letter" />
-          <img src="https://images.pexels.com/photos/6322476/pexels-photo-6322476.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hands & paper" />
-          <img src="https://images.pexels.com/photos/6311651/pexels-photo-6311651.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Letter & flowers" />
-          <div class="photo-sticker">💌</div>
-        </div>
-        <p class="photo-caption">
-          This page is for all the words we don’t always say out loud, but always feel. Keep this close.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PAGE 8 -->
-  <section id="page8" class="page page-alt">
-    <div class="page-inner">
-      <div>
-        <div class="tagline-pill">
-          <span>🌙</span> manifesting soft futures
-        </div>
-        <h2 class="page-heading">
-          All The Futures I See With You 🧃✨
-        </h2>
-        <p class="page-subtitle">
-          Future coffee dates, future trips, future inside jokes — we’re not done yet.
-        </p>
-        <p class="message">
-          In the future, I see us randomly texting each other, “remember when we were so stressed in college?”
-          and then laughing about how far we’ve come. I see us taking random trips, buying each other small gifts,
-          sending each other memes about getting old but still being un-serious. 😌
-        </p>
-        <p class="message">
-          I want to be there for your big wins — your first job, your first big achievement, your happiest days.
-          And I also want to be there on your boring days, your messy days, and your “I hate everything” days.
-        </p>
-        <p class="message">
-          Basically, <b>present, past, future — you’re stuck with me.</b> No return policy. 🫶
-        </p>
-
-        <div class="wish-wall">
-          <div class="wish-card" style="animation-delay: 0.05s;">
-            🌸 More peace in your heart, even on the busy days.
-          </div>
-          <div class="wish-card" style="animation-delay: 0.15s;">
-            💖 More self-love, less overthinking, lots of soft moments.
-          </div>
-          <div class="wish-card" style="animation-delay: 0.25s;">
-            ✈️ New adventures, new places, same old us.
-          </div>
-          <div class="wish-card" style="animation-delay: 0.35s;">
-            📚 Success in everything you quietly pray about.
-          </div>
-          <div class="wish-card" style="animation-delay: 0.45s;">
-            😴 Better sleep, fewer 3am spirals, more 3am laughs.
-          </div>
-          <div class="wish-card" style="animation-delay: 0.55s;">
-            🤍 People who see your worth and protect your heart.
-          </div>
-        </div>
-
-        <a href="#page9" class="next-link">
-          Open mini scrapbook <span>➜</span>
-        </a>
-      </div>
-      <div>
-        <div class="photo-grid">
-          <img src="https://images.pexels.com/photos/1449794/pexels-photo-1449794.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Travel dreams" />
-          <img src="https://images.pexels.com/photos/1007079/pexels-photo-1007079.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Night sky" />
-          <img src="https://images.pexels.com/photos/33283/stack-of-books-vintage-books-book-books.jpg?auto=compress&cs=tinysrgb&w=600" alt="Future stories" />
-          <img src="https://images.pexels.com/photos/3951628/pexels-photo-3951628.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cozy future" />
-          <div class="photo-sticker">🌙</div>
-        </div>
-        <p class="photo-caption">
-          These photos are like soft predictions — we don’t know the exact future, but I know I want you in mine.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PAGE 9 -->
-  <section id="page9" class="page">
-    <div class="page-inner">
-      <div>
-        <div class="tagline-pill">
-          <span>📔</span> mini digital scrapbook
-        </div>
-        <h2 class="page-heading">
-          Little Polaroids In My Head 🎞️
-        </h2>
-        <p class="page-subtitle">
-          If my brain had a scrapbook, these are the pages with you in it.
-        </p>
-        <p class="message">
-          • You, laughing so hard you forget to breathe.  
-          • You, ranting about life and then getting distracted by a snack.  
-          • You, getting excited over the smallest things.  
-          • You, half asleep but still replying to my “are you okay?” messages.  
-        </p>
-        <p class="message">
-          You are the softest part of so many days. I just want this page to remind you: you don’t have to be perfect,
-          you just have to be <b>you</b>. That’s already more than enough.
-        </p>
-        <div class="sticker-row">
-          <div class="sticker">🎞️ memory lane</div>
-          <div class="sticker">💘 fav person alert</div>
-          <div class="sticker">🥺 permanently attached</div>
-        </div>
-        <a href="#page10" class="next-link">
-          Final birthday note <span>➜</span>
-        </a>
-      </div>
-      <div>
-        <div class="photo-grid">
-          <img src="https://images.pexels.com/photos/4668363/pexels-photo-4668363.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cute polaroids" />
-          <img src="https://images.pexels.com/photos/1394882/pexels-photo-1394882.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fairy lights" />
-          <img src="https://images.pexels.com/photos/1652497/pexels-photo-1652497.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pink setup" />
-          <img src="https://images.pexels.com/photos/1449053/pexels-photo-1449053.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Photo collage" />
-          <div class="photo-sticker">📸</div>
-        </div>
-        <p class="photo-caption">
-          Print these vibes in your heart — you’re loved, you’re wanted, and you’re worth celebrating.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PAGE 10 -->
-  <section id="page10" class="page page-alt">
-    <div class="page-inner">
-      <div>
-        <div class="tagline-pill">
-          <span>💖</span> the final (but not final) note
-        </div>
-        <h2 class="page-heading">
-          To My Forever Person 🤍
-        </h2>
-        <p class="page-subtitle">
-          It’s the last page of the website, but never the last page of us.
-        </p>
-        <p class="message">
-          Happy Birthday once again, my love, my chaos, my safe place, my best friend. I don’t know what I did
-          to deserve you, but I’m so grateful that somehow our lives crossed and decided to stay tangled. 🥹
-        </p>
-        <p class="message">
-          Please promise me one thing this year: be kinder to yourself. Talk to yourself the way you talk to me
-          when I’m hurting. You are not “too much”, you are not “not enough” — you are exactly, beautifully,
-          perfectly you.
-        </p>
-        <p class="message">
-          No matter how many birthdays come and go, you’ll always have a permanent place in my life.  
-          <b>Always, always, always.</b> 💘
-        </p>
-        <div class="emoji-row">
-          🎂 💖 🎀 ✨ 🥺 🫶
-        </div>
-
-        <!-- Secret nickname area -->
-        <div class="secret-container">
-          <p>
-            Tiny secret corner: type your nickname below so I know it’s really you, and I’ll show you one more tiny note. 😏💌
-          </p>
-          <div class="secret-row">
-            <input type="text" id="secretInput" placeholder="your nickname here..." />
-            <button id="secretBtn">Open secret note</button>
-          </div>
-          <div class="secret-error" id="secretError"></div>
-          <div class="secret-message" id="secretMessage">
-            Hey, it’s really you. 🤍  
-            Thank you for staying, for trying, for loving, for existing. No matter how chaotic life gets, I hope you always remember this: there is at least one person on this planet who will always choose you in every version of you — and that person is me.  
-            You are not a phase, you are my constant. 🌙
-          </div>
-        </div>
-
-        <a href="#page1" class="next-link">
-          Back to the beginning <span>↺</span>
-        </a>
-      </div>
-      <div>
-        <div class="photo-grid">
-          <img src="https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cake" />
-          <img src="https://images.pexels.com/photos/6266261/pexels-photo-6266261.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Celebration" />
-          <img src="https://images.pexels.com/photos/3819778/pexels-photo-3819778.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Friends hugging" />
-          <img src="https://images.pexels.com/photos/3826674/pexels-photo-3826674.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Birthday party" />
-          <div class="photo-sticker">🎂</div>
-        </div>
-        <p class="photo-caption">
-          Imagine us right here, cutting cake, laughing, existing softly, and pretending we’re not getting older. 😌
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    Made with <span>love</span>, overthinking, and way too many emotions. 💗
-  </footer>
-
-  <!-- IMAGE POPUP VIEWER -->
-  <div id="imgPopup">
-    <span id="closePopup">✖</span>
-    <img id="popupImage" src="">
-  </div>
-
-  <script>
-    // Smooth scroll & active nav highlight
-    // Play / Pause single MP3 song
+<script>
+/* ----------------------------------------
+   🎵 MUSIC PLAYER (Play / Pause MP3 song)
+-----------------------------------------*/
 const bgMusic = document.getElementById("bgMusic");
 const musicToggle = document.getElementById("musicToggle");
 let isPlaying = false;
 
 if (bgMusic && musicToggle) {
   musicToggle.addEventListener("click", () => {
-
     if (!isPlaying) {
       bgMusic.play();
       isPlaying = true;
@@ -1597,203 +1711,205 @@ if (bgMusic && musicToggle) {
       isPlaying = false;
       musicToggle.textContent = "▶ Play our song 🎵";
     }
-
   });
 }
 
+/* ----------------------------------------
+   🌸 SMOOTH SCROLL + ACTIVE NAV HIGHLIGHT
+-----------------------------------------*/
+const navLinks = document.querySelectorAll(".nav-links a");
 
-    const navLinks = document.querySelectorAll(".nav-links a");
+navLinks.forEach(link => {
+  link.addEventListener("click", e => {
+    const targetId = link.getAttribute("href");
+    if (targetId.startsWith("#")) {
+      e.preventDefault();
+      document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
 
-    navLinks.forEach(link => {
-      link.addEventListener("click", e => {
-        const targetId = link.getAttribute("href");
-        if (targetId && targetId.startsWith("#")) {
-          e.preventDefault();
-          document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    });
-
-    const sections = document.querySelectorAll("section.page");
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const id = entry.target.getAttribute("id");
-            navLinks.forEach(link => {
-              link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
-            });
-            const inner = entry.target.querySelector(".page-inner");
-            if (inner) inner.classList.add("visible");
-          }
+/* ----------------------------------------
+   ✨ PAGE REVEAL ANIMATIONS
+-----------------------------------------*/
+const sections = document.querySelectorAll("section.page");
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
         });
-      },
-      {
-        root: null,
-        threshold: 0.4
-      }
-    );
 
-    sections.forEach(section => observer.observe(section));
-
-    // Make first page visible on load
-    window.addEventListener("load", () => {
-      const firstInner = document.querySelector("#page1 .page-inner");
-      if (firstInner) firstInner.classList.add("visible");
-      typeMainHeading();
-      createHeartBurst();
-    });
-
-    // Image popup fullscreen
-    const allImages = document.querySelectorAll(".photo-grid img");
-    const popup = document.getElementById("imgPopup");
-    const popupImg = document.getElementById("popupImage");
-    const closeBtn = document.getElementById("closePopup");
-
-    allImages.forEach(img => {
-      img.addEventListener("click", () => {
-        popupImg.src = img.src;
-        popup.style.display = "flex";
-      });
-    });
-
-    closeBtn.addEventListener("click", () => {
-      popup.style.display = "none";
-    });
-
-    popup.addEventListener("click", e => {
-      if (e.target === popup) {
-        popup.style.display = "none";
+        const inner = entry.target.querySelector(".page-inner");
+        if (inner) inner.classList.add("visible");
       }
     });
+  },
+  { threshold: 0.4 }
+);
+sections.forEach(section => observer.observe(section));
 
-    // Custom cursor movement
-    const cursorDot = document.getElementById("cursorDot");
-    document.addEventListener("mousemove", e => {
-      cursorDot.style.left = e.clientX + "px";
-      cursorDot.style.top = e.clientY + "px";
-    });
+/* Show first page on load */
+window.addEventListener("load", () => {
+  document.querySelector("#page1 .page-inner")?.classList.add("visible");
+  typeMainHeading();
+  createHeartBurst();
+});
 
-    // Scroll progress
-    const scrollBar = document.getElementById("scrollBar");
-    window.addEventListener("scroll", () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      scrollBar.style.width = progress + "%";
-    });
+/* ----------------------------------------
+   🖼 IMAGE POPUP (Lightbox)
+-----------------------------------------*/
+const popup = document.getElementById("imgPopup");
+const popupImg = document.getElementById("popupImage");
+const closeBtn = document.getElementById("closePopup");
 
-    // Typewriter effect for main heading
-    function typeMainHeading() {
-      const heading = document.getElementById("mainHeading");
-      const fullText = heading.textContent.trim();
-      heading.textContent = "";
-      let i = 0;
-      const speed = 70;
-      function type() {
-        if (i <= fullText.length) {
-          heading.textContent = fullText.slice(0, i);
-          i++;
-          setTimeout(type, speed);
-        }
-      }
-      type();
+document.querySelectorAll(".photo-grid img").forEach(img => {
+  img.addEventListener("click", () => {
+    popupImg.src = img.src;
+    popup.style.display = "flex";
+  });
+});
+
+closeBtn.addEventListener("click", () => popup.style.display = "none");
+
+popup.addEventListener("click", e => {
+  if (e.target === popup) popup.style.display = "none";
+});
+
+/* ----------------------------------------
+   💫 CUSTOM GLOW CURSOR
+-----------------------------------------*/
+const cursorDot = document.getElementById("cursorDot");
+document.addEventListener("mousemove", e => {
+  cursorDot.style.left = e.clientX + "px";
+  cursorDot.style.top = e.clientY + "px";
+});
+
+/* ----------------------------------------
+   📊 SCROLL PROGRESS BAR
+-----------------------------------------*/
+const scrollBar = document.getElementById("scrollBar");
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  scrollBar.style.width = progress + "%";
+});
+
+/* ----------------------------------------
+   ⌨ TYPEWRITER EFFECT (Page 1 heading)
+-----------------------------------------*/
+function typeMainHeading() {
+  const heading = document.getElementById("mainHeading");
+  const fullText = heading.textContent.trim();
+  heading.textContent = "";
+
+  let i = 0;
+  function type() {
+    if (i <= fullText.length) {
+      heading.textContent = fullText.slice(0, i);
+      i++;
+      setTimeout(type, 70);
     }
+  }
+  type();
+}
 
-    // Countdown (set her birthday here)
-    const countdownEl = document.getElementById("countdown");
-    const targetDate = new Date("2005-12-12T00:00:00"); // change this to real date
+/* ----------------------------------------
+   🎂 BIRTHDAY COUNTDOWN
+-----------------------------------------*/
+const countdownEl = document.getElementById("countdown");
+const targetDate = new Date("2005-12-12T00:00:00");
 
-    function updateCountdown() {
-      const now = new Date();
-      const diff = targetDate - now;
+function updateCountdown() {
+  const now = new Date();
+  const diff = targetDate - now;
 
-      if (diff <= 0) {
-        countdownEl.textContent = "Today is your day. +1 to your legend status 🎂✨";
-        return;
-      }
+  if (diff <= 0) {
+    countdownEl.textContent = "Today is your day. +1 to your legend status 🎂✨";
+    return;
+  }
 
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const mins = Math.floor((diff / (1000 * 60)) % 60);
-      const secs = Math.floor((diff / 1000) % 60);
+  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const m = Math.floor((diff / (1000 * 60)) % 60);
+  const s = Math.floor((diff / 1000) % 60);
 
-      countdownEl.textContent =
-        `Counting down to your birthday: ${String(days).padStart(2, "0")}d ` +
-        `${String(hours).padStart(2, "0")}h ${String(mins).padStart(2, "0")}m ${String(secs).padStart(2, "0")}s 💖`;
-    }
+  countdownEl.textContent =
+    `Counting down: ${String(d).padStart(2,"0")}d ${String(h).padStart(2,"0")}h ${String(m).padStart(2,"0")}m ${String(s).padStart(2,"0")}s 💖`;
+}
 
-    if (countdownEl) {
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    }
+setInterval(updateCountdown, 1000);
+updateCountdown();
 
-    // Heart confetti burst
-    function createHeartBurst() {
-      const hearts = ["💖", "💕", "💓", "💘", "❤️‍🔥"];
-      for (let i = 0; i < 18; i++) {
-        const span = document.createElement("span");
-        span.className = "heart-confetti";
-        span.textContent = hearts[Math.floor(Math.random() * hearts.length)];
-        const x = Math.random() * window.innerWidth;
-        const y = window.innerHeight - 40 + Math.random() * 20;
-        span.style.left = x + "px";
-        span.style.top = y + "px";
-        span.style.transition = "transform 2s, opacity 2s";
-        document.body.appendChild(span);
-        setTimeout(() => {
-          span.remove();
-        }, 2200);
-      }
-    }
+/* ----------------------------------------
+   💗 HEART CONFETTI BURST
+-----------------------------------------*/
+function createHeartBurst() {
+  const hearts = ["💖", "💕", "💓", "💘", "❤️‍🔥"];
 
-    const firstWishLink = document.getElementById("firstWishLink");
-    if (firstWishLink) {
-      firstWishLink.addEventListener("click", () => {
-        createHeartBurst();
-      });
-    }
+  for (let i = 0; i < 18; i++) {
+    const span = document.createElement("span");
+    span.className = "heart-confetti";
+    span.textContent = hearts[Math.floor(Math.random() * hearts.length)];
 
-    // Memory tabs logic
-    const memoryButtons = document.querySelectorAll(".memory-tabs button");
-    const memoryPanels = document.querySelectorAll(".memory-panel");
+    span.style.left = Math.random() * window.innerWidth + "px";
+    span.style.top = window.innerHeight - 20 + "px";
 
-    memoryButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const target = btn.getAttribute("data-target");
-        memoryButtons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        memoryPanels.forEach(panel => {
-          panel.classList.toggle("active", panel.id === target);
-        });
-      });
+    document.body.appendChild(span);
+    setTimeout(() => span.remove(), 2200);
+  }
+}
+
+/* Burst when clicking "Go to first wish" */
+document.getElementById("firstWishLink")?.addEventListener("click", createHeartBurst);
+
+/* ----------------------------------------
+   📂 MEMORY TABS
+-----------------------------------------*/
+const memoryButtons = document.querySelectorAll(".memory-tabs button");
+const memoryPanels = document.querySelectorAll(".memory-panel");
+
+memoryButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const target = btn.dataset.target;
+
+    memoryButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    memoryPanels.forEach(panel => {
+      panel.classList.toggle("active", panel.id === target);
     });
+  });
+});
 
-    // Secret nickname logic
-    const secretInput = document.getElementById("secretInput");
-    const secretBtn = document.getElementById("secretBtn");
-    const secretError = document.getElementById("secretError");
-    const secretMessage = document.getElementById("secretMessage");
+/* ----------------------------------------
+   🔐 SECRET NICKNAME REVEAL (Page 10)
+-----------------------------------------*/
+const secretInput = document.getElementById("secretInput");
+const secretBtn = document.getElementById("secretBtn");
+const secretError = document.getElementById("secretError");
+const secretMessage = document.getElementById("secretMessage");
 
-    const SECRET_CODE = "Akdoo"; // change to her real nickname (lowercase)
+const SECRET_CODE = "akdoo"; // auto-lowercase
 
-    secretBtn.addEventListener("click", () => {
-      const value = (secretInput.value || "").trim().toLowerCase();
-      if (!value) {
-        secretError.textContent = "Type something, drama queen. 😏";
-        secretMessage.classList.remove("visible");
-        return;
-      }
-      if (value === SECRET_CODE) {
-        secretError.textContent = "";
-        secretMessage.classList.add("visible");
-      } else {
-        secretError.textContent = "Wrong nickname 😤 Only the real you knows it.";
-        secretMessage.classList.remove("visible");
-      }
-    });
+secretBtn.addEventListener("click", () => {
+  const value = secretInput.value.trim().toLowerCase();
 
-   
-  </script>
-</body>
-</html>
+  if (!value) {
+    secretError.textContent = "Type something, drama queen. 😏";
+    secretMessage.classList.remove("visible");
+    return;
+  }
+
+  if (value === SECRET_CODE) {
+    secretError.textContent = "";
+    secretMessage.classList.add("visible");
+  } else {
+    secretError.textContent = "Wrong nickname 😤 Only the real you knows it.";
+    secretMessage.classList.remove("visible");
+  }
+});
+</script>
